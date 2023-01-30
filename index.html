@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">;
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">    
+    <title>Kalorienrechner</title>
+</head>
+<body>
+    <section class="me-auto ms-auto mt-2">
+        <h1 class="text-center .text-body-tertiary">Kalorienrechner</h1>
+        <form class="d-flex flex-column align-items-start mt-4 shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="form-group mt-3">
+                <label for="größe">Körpergröße in cm</label>
+                <input type="number" name="größe" id="größe" class="form-control">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="alter">Alter</label>
+                <input type="number" name="alter" id="alter" class="form-control bg-light-pink-lighter">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="gewicht">Gewicht in kg</label>
+                <input type="number" name="gewicht" id="gewicht" class="form-control bg-light-pink-lighter">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="körperbau">Körperbau</label>
+                <div class="d-flex">
+                    <input type="radio" name="körperbau" id="weiblich" value="weiblich" class="mt-2 btn-check" checked>
+                    <label for="weiblich" class="mt-2 btn btn-light btn-sm"><i class="bi-gender-female"></i> Weiblich</label>
+                
+                    <input type="radio" name="körperbau" id="männlich" value="männlich" class="mt-2 btn-check">
+                    <label for="männlich" class="mt-2 ms-2 btn btn-light btn-sm"><i class="bi-gender-male"></i> Männlich</label>
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="aktivität">Arbeits- und Freizeitaktivität</label>
+                <select name="aktivität" id="aktivität" class="form-control bg-light-pink-lighter">
+                    <option value="1" disabled selected value> </option>
+                    <option value="0.95">Schlafen</option>
+                    <option value="1.2">Nur sitzen oder liegen</option>
+                    <option value="1.5">Ausschließlich sitzende Tätigkeit (z.B. Büroarbeit)</option>
+                    <option value="1.7">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit (z.B. Kraftfahrer)</option>
+                    <option value="1.9">Überwiegend gehende oder stehende Tätigkeiten (z.B. Kellner)</option>
+                    <option value="2.2">Körperlich anstrengende berufliche Arbeit</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Submit" class="btn btn-primary mt-4">
+        </form>
+        <table class="table table-bordered mt-5">
+            <tr>
+                <th></th>
+                <th>kcal</th>
+                <th>kJ</th>
+            </tr>
+            <tr>
+                <th>Grundumsatz</th>
+                <th id="grundKcal"></th>
+                <th id="grundKj"></th>
+            </tr>
+            <tr>
+                <th>Gesamtumsatz</th>
+                <th id="gesamtKcal"></th>
+                <th id="gesamtKj"></th>
+            </tr>
+        </table>
+        <p class="fw-lighter mb-5">Das Ergebnis des Rechners sollten Sie als Orientierungswert ansehen, da es verschiedene Fehlermöglichkeiten gibt wie abweichender Grundumsatz, falsche Zeiteinschätzung etc.</p>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

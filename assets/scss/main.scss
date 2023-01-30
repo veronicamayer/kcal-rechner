@@ -1,0 +1,29 @@
+@use "mixins.scss";
+@use "variables.scss";
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+section {
+    hyphens: auto;
+    width: 40vw;
+}
+
+div {
+    width: 100%;
+}
+
+i {
+    font-size: 0.8rem; 
+    color: #333333;
+}
